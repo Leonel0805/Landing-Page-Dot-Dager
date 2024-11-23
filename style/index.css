@@ -1,0 +1,970 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:active{
+    color: white;
+}
+
+a:visited{
+    color: white;
+}
+
+a:hover{
+    color: white;
+}
+
+
+body{  
+    background-color: rgb(51, 51, 51);
+    font-size: 16px;
+    font-family: 'Press Start 2P', Courier;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 55%;
+    left: 90%;
+    width: 50%;
+    height: 100%;
+    background: rgba(219, 219, 219, 0.884);
+    transform: rotate(45deg);
+    transition: transform 0.5s;
+    z-index: 20;
+}
+
+.header{
+    width: 100%;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    box-shadow: 10px 5px 50px 20px rgba(34, 34, 34, 0.822);
+}
+
+
+
+.navbar{
+    height: 100%;
+    padding: 32px;
+    background-color: rgb(38, 38, 71);
+}
+
+
+
+.navbar__list{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    color: white;
+    /* margin-left: 20%;
+    margin-right: 20%; */
+    box-sizing: border-box;
+}
+
+.navbar__item{
+    position: relative;
+    font-size: 20px;
+    transition: transform 0.3s ease, top 0.5s;
+
+}
+
+.item--page{
+    cursor: pointer;
+}
+
+.navbar__logo, .navbar__logo__layout, .navbar__link{
+    position: absolute;
+    width: 50px;
+    top: -15px;
+    left: -450px;
+    transition: opacity 0.5s ease;
+}
+
+.navbar__logo{
+    opacity: 1;
+}
+.navbar__logo__layout{
+    opacity: 0;
+}
+
+.navbar__item:hover{
+    transform: scale(1.07); /* Aumenta el tamaño en un 50% */
+}
+.item--page:hover{
+    transform: translate(0px, -5px) scale(1.1);
+}
+
+
+.navbar__logoContainer:hover .navbar__logo{
+    opacity: 0;
+
+}
+
+.navbar__logoContainer:hover .navbar__logo__layout{
+    opacity: 1;
+
+}
+
+
+
+/* MAIN */
+main{
+    background-color: rgb(41, 41, 41);
+    width: 100%;
+    height: 100vh;
+    height: auto;
+    padding-top: 50px;
+}
+
+/* SECTION PRINCIPAL */
+
+.principal{
+    /* background-color: red; */
+    width: 90%;
+    height: 75vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.principal__container{
+    color: white;
+    background-color: rgb(58, 58, 58);
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 32px 0px;
+    position: relative;
+    z-index: 0;
+
+}
+
+.principal__content{
+    height: 100%;
+    width: 50%;
+    text-align: left;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px;
+}
+
+.principal__title{
+    font-size: 4rem;
+}
+
+.principal__parrafo{
+    margin-top: 16px;
+    font-size: 1.5rem;
+}
+
+.principal__list{
+    margin-top: 8px;
+    display: flex;
+    gap: 16px;
+
+}
+
+.principal__item{
+    background-color: rgb(236, 236, 236);
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+    
+}
+
+.principal__item:hover{
+    transform: scale(1.2);
+}
+
+.principal__item a {
+    color: rgb(0, 0, 0);
+}
+
+.principal__icon{
+    font-size: 25px;
+}
+
+
+.principal__image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    position: relative;
+
+
+}
+.principal__img__layout{
+    position: relative;
+    top: -45px;
+    right: -110px;
+    transition: transform 0.5s ease, opacity 0.5s; /* Suaviza las transformaciones */
+    opacity: 0;
+    filter: brightness(1.3);
+    z-index: 20;
+}
+
+.principal__img__layout:hover{
+    transform: rotateY(25deg) rotateX(10deg) translate(-50px, 15px); /* Rota la imagen en 3D */
+    opacity: 100;
+   
+}
+
+.principal__img{
+    position: absolute;
+    width: 400px;
+    display: block; 
+    border-radius: 50%;
+
+}
+
+/* SOBRE MI */
+
+.aboutMe{
+    height: 40vh;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.aboutMe__title{
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.aboutMe__container{
+    background-color: rgb(58, 58, 58);
+    width: 96%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 32px;
+    margin: 0 auto;
+    margin-top: 32px;
+    border-radius: 8px;
+    padding: 0px 32px;
+    position: relative;
+    z-index: 20;
+
+}
+
+.aboutMe__card{
+    text-align: center;
+    background-color: rgb(248, 248, 248);
+    padding: 16px;
+    border-radius: 8px;
+    min-height: 141px;
+    height: auto;
+    width: 30%;
+    transition: transform 0.5s ease;
+    z-index: 20;
+}
+
+.aboutMe__card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* .aboutMe__card__content{
+
+} */
+
+.card__title{
+    font-size: 1.8rem;
+}
+
+.card__parrafo{
+    margin-top: 16px;
+    font-size: 1.1rem;
+}
+
+/* CONTACTO */
+
+/* CONTACTO */
+.contacto{
+    padding-bottom: 32px;
+}
+
+
+.contacto__card{
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 8px;
+    border: 4px solid black;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 5px 10px 30px 5px rgba(44, 44, 44, 0.705);
+    margin-top: 100px;
+
+
+}
+
+.contacto__card-title{
+    font-size: 2rem;
+}
+
+.contacto__parrafo{
+    font-size: 1.1rem;
+}
+
+.icon{
+    font-size: 26px !important;
+}
+
+.icon-white{
+    color: white;
+}
+
+.icon-black{
+
+    color: black;
+}
+
+
+
+@media (max-width: 480px) {
+/* Estilos para dispositivos pequeños */
+
+    body{  
+    font-size: 16px;
+    font-family: 'Press Start 2P', Courier;
+    overflow: hidden;
+    overflow-y: auto;
+    }
+
+    main{
+        background-color: rgb(41, 41, 41);
+        width: 100%;
+        height: 100vh;
+        height: auto;
+        padding-top: 50px;
+    }
+
+
+    .header{
+        width: 100%;
+        position: sticky;
+        z-index: 100;
+        top: 0;
+        box-shadow: 10px 5px 50px 20px rgba(34, 34, 34, 0.822);
+    }
+    
+    
+    
+    .navbar{
+        height: 100%;
+        padding: 24px;
+        background-color: rgb(38, 38, 71);
+    }
+    
+    
+    .navbar__list{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        color: white;
+        box-sizing: border-box;
+    }
+    
+    .navbar__item{
+        position: relative;
+        font-size: 20px;
+        transition: transform 0.3s ease, top 0.5s;
+    }
+    
+    .item--page{
+        cursor: pointer;
+    }
+    
+    .navbar__logo, .navbar__logo__layout, .navbar__link{
+        position: absolute;
+        width: 50px;
+        top: 0px;
+        left: -180px;
+        transition: opacity 0.5s ease;
+    }
+    
+    /* PRINCIPAL */
+    .principal{
+        /* background-color: red; */
+        width: 90%;
+        height: 75vh;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .principal__container{
+        color: white;
+        background-color: rgb(58, 58, 58);
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16px;
+        overflow: hidden;
+        padding: 8px 0px;
+        position: relative;
+        z-index: 0;
+    
+    }
+    
+    .principal__content{
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        box-sizing: border-box;
+
+    }
+    
+    .principal__title{
+        font-size: 2.5rem;
+    }
+    
+    .principal__parrafo{
+        text-align: center;
+        margin-top: 16px;
+        font-size: 1.1rem;
+    }
+    
+    .principal__list{
+        margin-top: 16px;
+        display: flex;
+        gap: 16px;
+    
+    }
+    
+    .principal__item{
+        background-color: rgb(236, 236, 236);
+        padding: 8px 16px;
+        border-radius: 8px;
+        transition: transform 0.5s ease;
+        
+    }
+    
+    .principal__item:hover{
+        transform: scale(1.2);
+    }
+    
+    .principal__item a {
+        color: rgb(0, 0, 0);
+    }
+    
+    .principal__icon{
+        font-size: 25px;
+    }
+    
+    
+    .principal__image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50%;
+        width: 100%;
+        position: relative;
+        padding-bottom: 16px;
+    
+    
+    }
+    .principal__img__layout{
+        width: 350px;
+        position: relative;
+        top: -50px;
+        left: 100px;
+        transition: transform 0.5s ease, opacity 0.5s; /* Suaviza las transformaciones */
+        opacity:0;
+        filter: brightness(1.3);
+    }
+    
+    .principal__img__layout:hover{
+        transform: rotateY(25deg) rotateX(10deg) translate(-20px, 0px); /* Rota la imagen en 3D */
+        opacity: 100;
+       
+    }
+    
+    .principal__img{
+        position: absolute;
+        width: 300px;
+        display: block; 
+        border-radius: 50%;
+    }
+
+    
+    /* SOBRE MI */
+
+    .aboutMe{
+        height: 40vh;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .aboutMe__title{
+        position: relative;
+        z-index: 20;
+        text-align: center;
+        font-size: 2.5rem;
+        color: white;
+    }
+
+    .aboutMe__container{
+        margin-top: 32px;
+        background-color: rgb(58, 58, 58);
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 24px;
+        margin: 0 auto;
+        margin-top: 32px;
+        border-radius: 8px;
+        padding: 32px 16px;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 20;
+
+    }
+
+    .aboutMe__card{
+        text-align: center;
+        background-color: rgb(248, 248, 248);
+        padding: 16px 16px;
+        border-radius: 8px;
+        height: 100%;
+        transition: transform 0.5s ease;
+        z-index: 20;
+    }
+
+    .aboutMe__card:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+    }
+
+
+
+    /* .aboutMe__card__content{
+
+    } */
+
+    .card__title{
+        font-size: 1.5rem;
+    }
+
+    .card__parrafo{
+        margin-top: 16px;
+        font-size: 1.1rem;
+    }
+        
+    /* CONTACTO */
+    .contacto{
+        padding-bottom: 32px;
+    }
+
+
+    .contacto__card{
+        background-color: rgb(255, 255, 255);
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        font-size: 0.7rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 16px 8px;
+        border: 4px solid black;
+        text-align: center;
+        box-sizing: border-box;
+        border-radius: 8px;
+        box-shadow: 5px 10px 30px 5px rgba(44, 44, 44, 0.705);
+        margin-top: 250px;
+
+    }
+
+    .contacto__card-title{
+        font-size: 1.6rem;
+    }
+
+    .contacto__parrafo{
+        font-size: 1.1rem;
+    }
+
+    .icon{
+        font-size: 26px !important;
+    }
+
+    .icon-white{
+        color: white;
+    }
+
+    .icon-black{
+
+        color: black;
+    }
+
+
+    
+}
+
+@media (max-width: 768px) {
+
+
+    body{  
+        font-size: 16px;
+        font-family: 'Press Start 2P', Courier;
+        overflow: hidden;
+        overflow-y: auto;
+        }
+    
+        main{
+            background-color: rgb(41, 41, 41);
+    
+            width: 100%;
+            height: 100vh;
+            height: auto;
+            padding-top: 50px;
+        }
+    
+    
+        .header{
+            width: 100%;
+            position: sticky;
+            z-index: 100;
+            top: 0;
+            box-shadow: 10px 5px 50px 20px rgba(34, 34, 34, 0.822);
+        }
+        
+        
+        
+        .navbar{
+            height: 100%;
+            padding: 24px;
+            background-color: rgb(38, 38, 71);
+        }
+        
+        
+        .navbar__list{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            color: white;
+            box-sizing: border-box;
+        }
+        
+        .navbar__item{
+            position: relative;
+            font-size: 20px;
+            transition: transform 0.3s ease, top 0.5s;
+        }
+        
+        .item--page{
+            cursor: pointer;
+        }
+        
+        .navbar__logo, .navbar__logo__layout, .navbar__link{
+            position: absolute;
+            width: 50px;
+            top: 0px;
+            left: -180px;
+            transition: opacity 0.5s ease;
+        }
+
+          /* PRINCIPAL */
+    .principal{
+        /* background-color: red; */
+        width: 90%;
+        height: 75vh;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .principal__container{
+        color: white;
+        background-color: rgb(58, 58, 58);
+        height: 80%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16px;
+        overflow: hidden;
+        padding: 8px 0px;
+        position: relative;
+        z-index: 0;
+        box-sizing: border-box;
+    }
+    
+    .principal__content{
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        box-sizing: border-box;
+
+    }
+    
+    .principal__title{
+        font-size: 2.8rem;
+    }
+    
+    .principal__parrafo{
+        text-align: center;
+        margin-top: 16px;
+        font-size: 1.4rem;
+    }
+    
+    .principal__list{
+        margin-top: 16px;
+        display: flex;
+        gap: 16px;
+    
+    }
+    
+    .principal__item{
+        background-color: rgb(236, 236, 236);
+        padding: 8px 16px;
+        border-radius: 8px;
+        transition: transform 0.5s ease;
+        
+    }
+    
+    .principal__item:hover{
+        transform: scale(1.2);
+    }
+    
+    .principal__item a {
+        color: rgb(0, 0, 0);
+    }
+    
+    .principal__icon{
+        font-size: 25px;
+    }
+    
+    
+    .principal__image{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 50%;
+        width: 100%;
+        padding: 32px 16px
+
+    
+    
+    }
+    .principal__img__layout{
+        width: 350px;
+        position: relative;
+        top: -22px;
+        left: 70px;
+        transition: transform 0.5s ease, opacity 0.5s; /* Suaviza las transformaciones */
+        opacity:0;
+        filter: brightness(1.3);
+        z-index: 10;
+    }
+    
+    .principal__img__layout:hover{
+        transform: rotateY(25deg) rotateX(10deg) translate(-20px, 0px); /* Rota la imagen en 3D */
+        opacity: 100;
+       
+    }
+    
+    .principal__img{
+        position: absolute;
+        width: 300px;
+        display: block; 
+        border-radius: 50%;
+    }
+
+    
+    /* SOBRE MI */
+
+    .aboutMe{
+        height: 40vh;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .aboutMe__title{
+        position: relative;
+        z-index: 20;
+        text-align: center;
+        font-size: 2.5rem;
+        color: white;
+    }
+
+    .aboutMe__container{
+        margin-top: 32px;
+        background-color: rgb(58, 58, 58);
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 24px;
+        margin: 0 auto;
+        margin-top: 32px;
+        border-radius: 8px;
+        padding: 32px 16px;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 20;
+
+    }
+
+    .aboutMe__card{
+        text-align: center;
+        background-color: rgb(248, 248, 248);
+        padding: 16px 16px;
+        border-radius: 8px;
+        width: 90%;
+        height: 100%;
+        transition: transform 0.5s ease;
+        z-index: 20;
+    }
+
+    .aboutMe__card:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+    }
+
+
+
+    /* .aboutMe__card__content{
+
+    } */
+
+    .card__title{
+        font-size: 1.5rem;
+    }
+
+    .card__parrafo{
+        margin-top: 16px;
+        font-size: 1.1rem;
+    }
+        
+    /* CONTACTO */
+    .contacto{
+        padding-bottom: 32px;
+    }
+
+
+    .contacto__card{
+
+        background-color: rgb(255, 255, 255);
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        font-size: 0.7rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 16px 8px;
+        border: 4px solid black;
+        text-align: center;
+        box-sizing: border-box;
+        border-radius: 8px;
+        box-shadow: 5px 10px 30px 5px rgba(44, 44, 44, 0.705);
+        margin-top: 380px;
+
+    }
+
+    .contacto__card-title{
+        font-size: 1.6rem;
+    }
+
+    .contacto__parrafo{
+        font-size: 1.1rem;
+    }
+
+    .icon{
+        font-size: 26px !important;
+    }
+
+    .icon-white{
+        color: white;
+    }
+
+    .icon-black{
+
+        color: black;
+    }
+
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+/* Estilos para tabletas */
+}
+
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+/* Estilos para laptops */
+}
+
+
+
+
+

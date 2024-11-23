@@ -54,7 +54,7 @@ body::before {
     position: sticky;
     z-index: 100;
     top: 0;
-    box-shadow: 10px 5px 50px 20px rgba(34, 34, 34, 0.822);
+    box-shadow: 10px 5px 50px 20px rgb(34, 34, 34);
 }
 
 
@@ -62,7 +62,7 @@ body::before {
 .navbar{
     height: 100%;
     padding: 32px;
-    background-color: rgb(38, 38, 71);
+    background-color: rgb(32, 32, 32);
 }
 
 
@@ -391,7 +391,7 @@ main{
     .navbar{
         height: 100%;
         padding: 24px;
-        background-color: rgb(38, 38, 71);
+        background-color: rgb(32, 32, 32);
     }
     
     
@@ -690,7 +690,7 @@ main{
         .navbar{
             height: 100%;
             padding: 24px;
-            background-color: rgb(38, 38, 71);
+            background-color: rgb(32, 32, 32);
         }
         
         

@@ -33,21 +33,10 @@ body{
     font-size: 16px;
     font-family: 'Press Start 2P', Courier;
     overflow: hidden;
+    height: auto;
     overflow-y: auto;
 }
 
-body::before {
-    content: '';
-    position: absolute;
-    top: 55%;
-    left: 90%;
-    width: 50%;
-    height: 100%;
-    background: rgba(219, 219, 219, 0.884);
-    transform: rotate(45deg);
-    transition: transform 0.5s;
-    z-index: 20;
-}
 
 .header{
     width: 100%;
@@ -126,11 +115,12 @@ body::before {
 
 /* MAIN */
 main{
-    background-color: rgb(41, 41, 41);
+    background-color: #292929;
     width: 100%;
-    height: 100vh;
-    height: auto;
+    height: 100%;
     padding-top: 50px;
+    position: relative; 
+    overflow: hidden;
 }
 
 /* SECTION PRINCIPAL */
@@ -245,6 +235,17 @@ main{
 
 /* SOBRE MI */
 
+.diagonal__decoration{
+    position: absolute;
+    top: 12%;
+    right: -50%; /* Reduce el desplazamiento hacia la derecha */
+    width: 60%; /* Ajusta el ancho para evitar que sobresalga */
+    height: 80%; /* Reduce el alto */
+    background: rgba(175, 175, 175, 0.884);
+    transform: rotate(45deg);
+    z-index: 20;
+}
+
 .aboutMe{
     height: 40vh;
     width: 90%;
@@ -311,7 +312,7 @@ main{
 
 /* CONTACTO */
 .contacto{
-    padding-bottom: 32px;
+    padding-bottom: 64px;
 }
 
 
@@ -362,15 +363,9 @@ main{
 @media (max-width: 480px) {
 /* Estilos para dispositivos pequeños */
 
-    body{  
-    font-size: 16px;
-    font-family: 'Press Start 2P', Courier;
-    overflow: hidden;
-    overflow-y: auto;
-    }
 
     main{
-        background-color: rgb(41, 41, 41);
+        background-color: rgb(235, 96, 96);
         width: 100%;
         height: 100vh;
         height: auto;
@@ -738,7 +733,7 @@ main{
     .principal__container{
         color: white;
         background-color: rgb(58, 58, 58);
-        height: 80%;
+        height: 90%;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -746,7 +741,7 @@ main{
         align-items: center;
         border-radius: 16px;
         overflow: hidden;
-        padding: 8px 0px;
+        padding: 32px 0px;
         position: relative;
         z-index: 0;
         box-sizing: border-box;
